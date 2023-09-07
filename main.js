@@ -41,6 +41,10 @@ $(document).ready(function(){
 
 		$('.products').append(block);
 	}
+
+	$('button').on('click', function(){
+		$('.cart span').html(1);
+	});
 });
 
 {/* <div class="product">
@@ -51,6 +55,6 @@ $(document).ready(function(){
 		<div class="product_code">Product Code: <span>1</span></div>
 		<div class="product_nav">
 			<div class="product_price">UAH <span>10 000</span></div>
-			<button>Add to cart</button>
+			<button data-id="1">Add to cart</button>
 		</div>
 </div> */}

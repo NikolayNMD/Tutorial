@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<link
+        href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+        rel="stylesheet"
+    />
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
 </head>
 <body>
-    
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<a href="#">LOGO</a>
+				<a href="cart.html" class="cart">Cart (<span>0</span>)</a>
+			</div>
+		</header>
+		<div id="content">
+			<div class="container">
+				<div class="products cart">
+                    <ul class="cart_nav">
+                        <li>Decription</li>
+                        <li>Quantity</li>
+                        <li>Remove</li>
+                        <li>Price</li>
+                    </ul>
+                    <div class="cart_products">
+                        <div class="cart_product">
+                            <div class="cart_product_info">
+                                <div class="cart_product_image">
+                                    <img src="https://hotline.ua/img/tx/182/1821114155.jpg" alt="phone">
+                                </div>
+                                <a href="#" class="cart_product_title">Apple iPad Pro 12.9</a>
+                            </div>
+                            <div class="cart_product_quantity">
+                                <button type="button" class="plus_button">+</button>
+                                <input type="text" value="1">
+                                <button type="button" class="minus_button">-</button>
+                            </div>
+                            <div class="cart_product_remove">
+                                <button>&times;</button>
+                            </div>
+                            <div class="cart_product_price">18999 UAH</div>
+                        </div>
+                        <div class="cart_product">
+                            <div class="cart_product_info">
+                                <div class="cart_product_image">
+                                    <img src="https://hotline.ua/img/tx/182/1821114155.jpg" alt="phone">
+                                </div>
+                                <a href="#" class="cart_product_title">Apple iPad Pro 12.9</a>
+                            </div>
+                            <div class="cart_product_quantity">
+                                <button type="button" class="plus_button">+</button>
+                                <input type="text" value="1">
+                                <button type="button" class="minus_button">-</button>
+                            </div>
+                            <div class="cart_product_remove">
+                                <button>&times;</button>
+                            </div>
+                            <div class="cart_product_price">18999 UAH</div>
+                        </div>
+                        <div class="cart_product">
+                            <div class="cart_product_info">
+                                <div class="cart_product_image">
+                                    <img src="https://hotline.ua/img/tx/182/1821114155.jpg" alt="phone">
+                                </div>
+                                <a href="#" class="cart_product_title">Apple iPad Pro 12.9</a>
+                            </div>
+                            <div class="cart_product_quantity">
+                                <button type="button" class="plus_button">+</button>
+                                <input type="text" value="1">
+                                <button type="button" class="minus_button">-</button>
+                            </div>
+                            <div class="cart_product_remove">
+                                <button>&times;</button>
+                            </div>
+                            <div class="cart_product_price">18999 UAH</div>
+                        </div>
+                    </div>
+                    <!-- <div class="products deskr"><ul>
+                        <li><img src="" alt="phone" class="products item"></li>
+                        <li><img src="" alt="pods" class="products item"></li>
+                    </ul>
+                    </div> -->
+                </div>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="container">
+				<p>&copy; if value === array</p>
+			</div>
+		</footer>
+	</div>
 </body>
+<script src="cart.js"></script>
 </html>

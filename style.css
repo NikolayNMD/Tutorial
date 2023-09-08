@@ -1,64 +1,74 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+#wrapper {
+  min-height: calc(100vh - 16px);
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  flex: 1;
+  display: flex;
+}
+
+footer {
+  flex: 0;
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
 }
-#wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 a {
-  color: currentColor;
   text-decoration: none;
+  color: #000; 
 }
-
-button {
-  cursor: pointer;
-  font-family: inherit;
-  color: currentColor;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-input {
-  font-family: inherit;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-
 .container {
     width: 100%;
     max-width: 1000px;
@@ -123,4 +133,102 @@ input {
 .product_price {
   font-size: 18px;
   font-weight: bold;
+}
+
+.products.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart_nav {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.cart_nav li {
+  width: 25%;
+  text-align: center;
+  font-size: 15px;
+  line-height: -1em;
+}
+
+.cart_nav li:first-child {
+  width: 50%;
+}
+.cart_nav li:nth-child(3),
+.cart_nav li:last-child {
+  width: 100px;
+}
+.cart_product {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.cart_product_image img {
+  width: 100px;
+}
+.cart_product_quantity,
+.cart_nav li:nth-child(2) {
+  width: calc(50% - 200px);
+}
+.cart_product_info {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.cart_product_title {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+
+.minus_button,
+.plus_button {
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.minus_button {
+  background: #ccc;
+}
+.cart_product_quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.cart_product_quantity input,
+.cart_product_remove button {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+
+.plus_button {
+  background-color: #0a224a;
+  color: #ffffff;
+
+}
+
+.cart_product_remove, 
+.cart_product_price {
+  width: 100px;
+  text-align: center;
+}
+.cart_product_remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_product_remove button {
+  border: 1px solid #ccc;
+  background: none;
+}
+
+footer {
+  flex-shrink: 0;
 }

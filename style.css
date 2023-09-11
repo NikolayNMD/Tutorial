@@ -62,7 +62,6 @@ footer {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
 }
 
 a {
@@ -79,14 +78,16 @@ a {
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
 .product {
-  width: calc((100% - 20px) / 3);
+  width: calc((100% - 30px) / 3);
   background-color: #ffffff;
   padding: 20px;
-  border: 2px #808080 solid;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.22);
 }
 
 .product_image {
@@ -277,6 +278,7 @@ footer {
   background-color: #000;
   padding-top: 22px;
   padding-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 .head_logo {
@@ -284,5 +286,55 @@ footer {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: -0.12em;
-  padding: 8px;
+}
+
+.cart_total {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.total span {
+  font-weight: bold;
+}
+
+.footer_box {
+  display: flex;
+  padding-top: 20px;
+}
+
+.footer_block {
+  width: 25%;
+}
+
+.footer_block.footer_logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_logo a:first-child {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.footer_block h3 {
+  color: #1d3358;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer_block p {
+  margin-bottom: 10px;
+}
+
+#footer {
+  border-top: 1px solid #ccc;
+}
+
+#content {
+  padding-bottom: 20px;
 }

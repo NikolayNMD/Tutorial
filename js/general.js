@@ -31,3 +31,14 @@ const nav = [
     {'name': 'pricing', 'href': 'pricing.html'},
     {'name': 'Login', 'href': 'login.html'},
 ];
+
+$(document).ready(function(){
+	$('.burger_menu').on('click', function(){
+		$(this).toggleClass('open');
+		$('.head_nav').toggleClass('open');
+	});
+	$(window).on("resize", function() {
+		$('.burger_menu').removeClass('open');
+		$('.head_nav').removeClass('open');
+	});
+});

@@ -30,6 +30,8 @@ $(document).ready(function(){
 
 	function addToCart(product)
 	{
+		// document.cookie = "user=John"; // обновляем только куки с именем 'user'
+ 		// alert(document.cookie);
 		cartCookies = false;
 
 		if (cartCookies) {
@@ -42,11 +44,12 @@ $(document).ready(function(){
 			console.log($.session.get('cart'));
 
 		} else {
-			const cart = [];
+			const cart = {};
 			product.quantity = 1;
-			cart['products'] = [product];
-			cart['totalPrice'] = parseInt(product.price);
-			console.log('PRODUCT ADDED');
+			cart.products = {product};
+			cart.totalPrice = parseInt(product.price);
+			setCookie('cart', JSON.stringify(cart));
+			console.log(getCookie('cart'));
 		}
 	}
 
@@ -60,3 +63,8 @@ $(document).ready(function(){
 		return false;
 	}
 });
+function getCookie(name) {
+	const value = `; ${document.cookie}`;
+	const parts = value.split(`; ${name}=`);
+	if (parts.length === 2) return parts.pop().split(';').shift();
+}
